@@ -1,5 +1,10 @@
 # Projeto de Reatímetro
 _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear por meio do cálculo de cinética pontual inversa para medição da reatividade em tempo real. Pesquisa financiada pelo CNPQ, feita em colaboração com o IEN (Instituto de Engenharia Nuclear)._
+
+---
+![logo](./imgs/ien.png)
+![logo](./imgs/ufrj.png)
+---
 ## Arquivos:
 
 
