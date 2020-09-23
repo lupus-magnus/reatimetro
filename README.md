@@ -3,7 +3,7 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 
 ---
 ![logo](./imgs/ien.png)
-![logo](./imgs/ufrj.png | width=185)
+![logo](./imgs/ufrj.png)
 
 ---
 
