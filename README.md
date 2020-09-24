@@ -49,7 +49,9 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 
 2. Receber e converter os dados lidos pelo sensor eletrônico do reator em uma escala linear. Montar uma lista ou array desses valores convertidos.
 
-<p> Isso será feito por meio do arquivo logtolin.py, que em breve será implementado.</p>
+<p> Isso foi feito por meio do arquivo logtolin.py, que automatiza o processo de conversão, assim possibilitando futuras leituras igualmente velozes de outros dados recebidos.</p>
+
+![logo](./imgs/linear_signal.png)
 
 3. Suavizar esses dados de leitura pelo método da média móvel. Comparar dados de potência ruidosos e suaves.
 
