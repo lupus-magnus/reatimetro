@@ -20,13 +20,11 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 ## Arquivos:
 
 
-* ./imgs: Pasta contendo as imagens para conteúdo explicativo, principalmente para o arquivo README.md do github.
+* ./imgs: Pasta contendo as imagens para conteúdo explicativo, principalmente para o arquivo README.md do github (no caso, esse que você está lendo agora).
 
-* signal.csv: Arquivo excel que contém a tabela de valores colhidos diretamente da potência do reator. Lembrando que está em escala log. 
+* signal.csv: Arquivo excel (tabela) que contém a tabela de valores colhidos diretamente da potência do reator.  Lembrando que está em escala log. Essa tabela não será alterada, para evitar qualquer mudança indesejada dos dados iniciais.
 
-* data.csv: Arquivo que conterá as diversas colunas necessárias para a operação completa.
-
-* main.py: se encarrega de puxar todas as outras funções dos outros programas e rodá-los sequencialmente.
+* data.csv: Arquivo excel (tabela) que conterá as diversas colunas necessárias para a operação completa.
 
 * logtolin.py: Faz a conversão do sinal bruto do reator logarítimico para uma escala linear.
 
@@ -35,6 +33,8 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 * historical.py: Trabalha os dados e faz o histórico de potência ponto a ponto.
 
 * reactivity.py: Em última instância, gera os valores de reatividade ponto a ponto e plota o resultado final.
+
+* main.py: se encarrega de puxar todas as outras funções dos outros programas e rodá-los sequencialmente.
 
 ## Plano de Trabalho:
 
