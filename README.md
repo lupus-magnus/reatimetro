@@ -6,6 +6,16 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 ![logo](./imgs/ufrj.png)
 
 ---
+## Tecnologias e dependências:
+
+* Arduino ou Raspberry Pie 3
+* Python 3x
+* Bibliotecas Python:
+    * Pandas, 
+    * Matplotlib,
+    * Numpy,
+    * csv,
+    * Pyserial (para receber os dados eletrônicos da instrumentação).
 
 ## Arquivos:
 
@@ -25,3 +35,24 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 * historical.py: Trabalha os dados e faz o histórico de potência ponto a ponto.
 
 * reactivity.py: Em última instância, gera os valores de reatividade ponto a ponto e plota o resultado final.
+
+## Plano de Trabalho:
+
+1. Ter um arquivo .csv (é o tipo de arquivo excel, uma tabela normal de valores) para trabalhar as colunas. No primeiro arquivo só haverá tempo e sinal, que são os dados iniciais que temos. Na segunda, já trabalharemos os seus valores coluna por coluna. A primeira dessas colunas sendo o dado de sinal bruto e a segunda o sinal linear; a terceira será o sinal linear suavizado, a quarta histórico e a quinta reatividade.
+
+<p> O primeiro arquivo já foi abordado. O arquivo signal.csv carrega os dados brutos do reator, que foram já plotados abaixo.</p>
+
+![logo](./imgs/brute_signal.png)
+<p>Gráfico 1: Sinal bruto da instrumentação do Argonauta. É possível ver a natureza oscilatória causada pela limitação da instrumentação nativa. </p>
+
+
+
+2. Receber e converter os dados lidos pelo sensor eletrônico do reator em uma escala linear. Montar uma lista ou array desses valores convertidos.
+
+<p> Isso será feito por meio do arquivo logtolin.py, que em breve será implementado.</p>
+
+3. Suavizar esses dados de leitura pelo método da média móvel. Comparar dados de potência ruidosos e suaves.
+
+<p> Estou estudando as possíveis estratégias para a suavização da curva que surge linearizada. A natureza ruidosa dos dados reais atrapalha o seu tratamento via diferenciação e integração. Queremos minimizar o erro decorrente desses processos.</p>
+
+4. A partir dos dados suavizados, gerar os arranjos de histórico e de reatividade e então plotá-los.
