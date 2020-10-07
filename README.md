@@ -55,6 +55,14 @@ _Desenvolvimento de um sistema de monitoramento da operação de reator nuclear 
 
 3. Suavizar esses dados de leitura pelo método da média móvel. Comparar dados de potência ruidosos e suaves.
 
-<p> Estou estudando as possíveis estratégias para a suavização da curva que surge linearizada. A natureza ruidosa dos dados reais atrapalha o seu tratamento via diferenciação e integração. Queremos minimizar o erro decorrente desses processos.</p>
+<p> No presente momento, acabo de experimentar a função de média móvel simples nos dados linearizados de potência. O teste foi feito para os n's de 10, 20, 30, 40 e 50. Segue o gráfico da região mais ruidosa da curva abaixo: </p>
+
+![logo](./imgs/smooth.png)
+
+<p>Nos próximos passos, estarei prosseguindo com os cálculos do histórico e da reatividade para cada n. Há um tradeoff entre suavidade e atraso temporal, para os diferentes valores de n. Por isso, é necessário escolher o menor n viável para que a curva já seja suave o suficiente. Essa escolha será determinada empiricamente de acordo com as curvas de reatividade calculadas a partir de cada um.</p>
+
+<p>
+Ainda nessa questão, será experimentado também como alternativa o modelo de média móvel exponencial, que usa uma média ponderada (com maior peso nas amostragens mais recentes) para poder dessa forma maximizar o nosso ganho de suavidade e não perder tanto em relação ao atraso (visto que nossa curva suave tenderá mais para os dados atuais).
+</p>
 
 4. A partir dos dados suavizados, gerar os arranjos de histórico e de reatividade e então plotá-los.
